@@ -8,7 +8,7 @@ def call(emailTo, emailFrom, displayName, result, jobName, buildNumber, buildUrl
                 </b></p><p> View Console output at "<a href="${buildUrl}">
                 ${jobName}:${buildNumber}</a>"</p>
                 <p><i>(Build log is attached)</i></p>
-            """
+            """,
             compressLog: 'true',
             attachLog: 'true'
     )
