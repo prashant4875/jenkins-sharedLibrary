@@ -4,8 +4,8 @@ def call(emailTo, emailFrom, displayName, result, jobName, buildNumber, buildUrl
             from: emailFrom,
             subject: "This is a build for ${displayName}:${result}",
             body: """
-                JenkinsBuild: ${jobName}
-                BuildNumber: ${buildNumber}
+                JenkinsBuild: ${jobName}\n
+                BuildNumber: ${buildNumber}\n
                 BuildUrl: ${buildUrl}
             """
     )
