@@ -4,9 +4,12 @@ def call(emailTo, emailFrom, displayName, result, jobName, buildNumber, buildUrl
             from: emailFrom,
             subject: "This is a build for ${displayName}:${result}",
             body: """
-                JenkinsBuild: ${jobName}\n
-                BuildNumber: ${buildNumber}\n
-                BuildUrl: ${buildUrl}
+                <p> EXECUTED: Job <b>\'${result} ${jobName}:${buildNumber}\'
+                </b></p><p> View Console output at "<a href="${buildUrl}">
+                ${jobName}:${buildNumber}</a>"</p>
+                <p><i>(Build log is attached)</i></p>
             """
+            compressLog: 'true',
+            attachLog: 'true'
     )
 }
