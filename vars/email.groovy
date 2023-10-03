@@ -1,4 +1,4 @@
-def call(emailTo, emailFrom, displayName, result, jobName, buildNumber, buildUrl):
+def call(emailTo, emailFrom, displayName, result, jobName, buildNumber, buildUrl) {
     emailext (
             to: emailTo,
             from: emailFrom,
@@ -9,3 +9,4 @@ def call(emailTo, emailFrom, displayName, result, jobName, buildNumber, buildUrl
                 BuildUrl: ${buildUrl}
             """
     )
+}
