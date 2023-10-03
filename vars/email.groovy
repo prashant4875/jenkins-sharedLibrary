@@ -1,10 +1,10 @@
-def call(string emailTo, 
-        string emailFrom, 
-        string displayName, 
-        string result, 
-        string jobName, 
-        string buildNumber, 
-        string buildUrl) {
+def call(emailTo, 
+        emailFrom, 
+        displayName, 
+        result, 
+        jobName, 
+        buildNumber, 
+        buildUrl) {
     emailext (
             to: emailTo,
             from: emailFrom,
