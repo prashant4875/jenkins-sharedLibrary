@@ -6,8 +6,8 @@ def call( Map propertyInfo ){
             stage('Checkout Stage') {
                 steps{
                     script{
-                        echo "${env.Environment}"
-                        echo "${env.GithubRepo}"
+                        echo "${params.Environment}"
+                        echo "${params.GithubRepo}"
                     }
                 }
             }
