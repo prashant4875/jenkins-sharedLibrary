@@ -8,6 +8,8 @@ def call( Map propertyInfo ){
                     script{
                         echo "${params.Environment}"
                         echo "${params.GithubRepo}"
+                        git branch: 'develop', url: "${params.GithubRepo}"
+                        sh "git checkout develop"
                     }
                 }
             }
