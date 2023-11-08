@@ -1,4 +1,4 @@
-def call( Map propertyInfo ){
+def call(){
     pipeline{
         agent any
 
