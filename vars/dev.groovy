@@ -3,13 +3,14 @@ def call( Map propertyInfo ){
         agent any
 
         stages{
-            stage('Checkout Stage')
+            stage('Checkout Stage') {
                 steps{
                     script{
                         echo "${env.Environment}"
                         echo "${env.GithubRepo}"
                     }
                 }
+            }
         }
     }
 }
