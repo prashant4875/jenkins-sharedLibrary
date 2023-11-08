@@ -30,8 +30,7 @@ def call(){
             stage('Build Stage'){
                 steps{
                     script{
-                        buildUtils = new npm()
-                        buildUtils.npmInstall()
+                        npm.npmInstall()
                     }
                 }
             }
