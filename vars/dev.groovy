@@ -1,4 +1,9 @@
+import com.wm.utils.*
+
 def call(){
+
+    def buildUtils
+
     pipeline{
         agent any
 
@@ -19,6 +24,14 @@ def call(){
                 steps{
                     script{
                         echo "${currentBuild.fullDisplayName},${currentBuild.result},${env.JOB_NAME},${env.BUILD_NUMBER},${env.BUILD_URL}"
+                    }
+                }
+            }
+            stage('Build Stage'){
+                steps{
+                    script{
+                        buildUtils = new npm()
+                        buildUtils.npmInstall()
                     }
                 }
             }
