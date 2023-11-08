@@ -15,6 +15,13 @@ def call(){
                     }
                 }
             }
+            stage('Job Details'){
+                steps{
+                    script{
+                        echo "${currentBuild.fullDisplayName}","${currentBuild.result}","${env.JOB_NAME}","${env.BUILD_NUMBER}","${env.BUILD_URL}"
+                    }
+                }
+            }
         }
     }
 }
