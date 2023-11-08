@@ -8,8 +8,10 @@ def call( Map propertyInfo ){
                     script{
                         echo "${params.Environment}"
                         echo "${params.GithubRepo}"
-                        git branch: 'develop', url: "${params.GithubRepo}"
-                        sh "git checkout develop"
+                        def release_branch = "${params.Branch}"
+                        def release = release_branch.substring(7)
+                        git branch: release, url: "${params.GithubRepo}"
+                        sh "git checkout ${release}"
                     }
                 }
             }
