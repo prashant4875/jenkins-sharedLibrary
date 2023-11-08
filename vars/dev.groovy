@@ -20,6 +20,13 @@ def call(){
                     }
                 }
             }
+            stage('Slave Info'){
+                steps{
+                    script{
+                        common.collectSlaveInfo()
+                    }
+                }
+            }
             stage('Job Details'){
                 steps{
                     script{
