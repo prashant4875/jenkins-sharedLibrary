@@ -34,14 +34,14 @@ def call(){
                     }
                 }
             }
-            stage('Build Stage'){
-                steps{
-                    script{
-                        buildUtils = new npm()
-                        buildUtils.npmInstall()
-                    }
-                }
-            }
+            // stage('Build Stage'){
+            //     steps{
+            //         script{
+            //             buildUtils = new npm()
+            //             buildUtils.npmInstall()
+            //         }
+            //     }
+            // }
         }
     }
 }
