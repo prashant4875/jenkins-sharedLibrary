@@ -30,6 +30,8 @@ def call(){
             stage('Job Details'){
                 steps{
                     script{
+                        def splitRepo = params.GithubRepo.split('/').last()
+                        echo "${splitRepo}"
                         echo "${currentBuild.fullDisplayName},${currentBuild.result},${env.JOB_NAME},${env.BUILD_NUMBER},${env.BUILD_URL}"
                     }
                 }
