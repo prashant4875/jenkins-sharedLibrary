@@ -16,7 +16,7 @@ def call(){
                 defaultValue: 'origin/master',
                 sortMode: 'DESCENDING_SMART',
                 type: 'PT_BRANCH',
-                useRepository: 'https://github.com/prashant4875/Netflix-clone.git'
+                // useRepository: 'https://github.com/prashant4875/Netflix-clone.git'
             )
         }
 
