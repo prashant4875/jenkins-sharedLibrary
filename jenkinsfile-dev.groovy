@@ -1,4 +1,3 @@
-@Library('shared') _
 properties([
     parameters([
         choice(name: 'Environment', choices: ['dev', 'sit2'], description: 'The target environment'),
@@ -13,4 +12,5 @@ properties([
         )
     ])
 ])
+@Library('shared') _
 dev()
