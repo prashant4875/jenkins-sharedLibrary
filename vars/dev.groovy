@@ -7,7 +7,7 @@ def call(){
     pipeline{
         agent any
 
-        parameters([
+        parameters{
             choice(name: 'Environment', choices: ['dev', 'sit2'], description: 'The target environment'),
             choice(name: 'GithubRepo', choices: ['https://github.com/prashant4875/Netflix-clone'], description: 'Select Github repo to checkout'),
             gitParameter(
@@ -18,7 +18,7 @@ def call(){
                 type: 'PT_BRANCH',
                 useRepository: 'https://github.com/prashant4875/Netflix-clone.git'
             )
-        ])
+        }
 
         stages{
             stage('Checkout Stage') {
