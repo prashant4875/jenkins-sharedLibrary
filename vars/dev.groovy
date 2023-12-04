@@ -7,7 +7,6 @@ def call(){
     pipeline{
         agent any
 
-
         stages{
             stage('Checkout Stage') {
                 steps{
@@ -16,8 +15,8 @@ def call(){
                         echo "${params.GithubRepo}"
                         def release_branch = "${params.Branch}"
                         def release = release_branch.substring(7)
-                        git branch: release, url: "${params.GithubRepo}"
-                        sh "git checkout ${release}"
+                        git branch: 'develop', url: "${params.GithubRepo}"
+                        sh "git checkout develop"
                     }
                 }
             }
