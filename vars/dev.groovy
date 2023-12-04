@@ -8,8 +8,8 @@ def call(){
         agent any
 
         parameters{
-            choice(name: 'Environment', choices: ['dev', 'sit2'], description: 'The target environment'),
-            choice(name: 'GithubRepo', choices: ['https://github.com/prashant4875/Netflix-clone'], description: 'Select Github repo to checkout'),
+            choice(name: 'Environment', choices: ['dev', 'sit2'], description: 'The target environment')
+            choice(name: 'GithubRepo', choices: ['https://github.com/prashant4875/Netflix-clone'], description: 'Select Github repo to checkout')
             gitParameter(
                 name: 'Branch',
                 branchFilter: "origin/develop|origin/release.*",
