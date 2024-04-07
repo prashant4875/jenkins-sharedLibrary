@@ -3,7 +3,7 @@ import com.wm.utils.newClass
 def call(String name){
     def buildUtils
     buildUtils = new newClass()
-    buildUtils.newClass.greet(name)
+    buildUtils.greet(name)
 
     def request = libraryResource 'example/test/sample.txt'
     echo "$request"
