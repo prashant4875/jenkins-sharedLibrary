@@ -5,7 +5,7 @@ pipeline{
         stage('Demo stage'){
             steps{
                 script{
-                    new 'Shivam'
+                    new()
                 }
             }
         }
