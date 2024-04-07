@@ -1,8 +1,7 @@
 import com.wm.utils.newClass 
 
-def buildUtils
-
 def call(String name = "Shivam"){
+    def buildUtils
     buildUtils = new newClass()
     buildUtils.MyFunctions.greet(name)
 
