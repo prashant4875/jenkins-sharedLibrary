@@ -5,7 +5,7 @@ pipeline{
         stage('Demo stage'){
             steps{
                 script{
-                    testShared('Shivam')
+                    testShared('Shivam Bhadouria')
                 }
             }
         }
