@@ -4,9 +4,7 @@ pipeline{
     stages{
         stage('Demo stage'){
             steps{
-                script{
                     new()
-                }
             }
         }
     }
